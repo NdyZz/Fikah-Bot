@@ -28,7 +28,7 @@ const {
    writeExifVid
 } = require('./lib/exif')
 const { toAudio, toPTT, toVideo } = require('./lib/converter')
-//http.createServer((_, res) => res.end("Uptime!")).listen(8080)
+http.createServer((_, res) => res.end("Uptime!")).listen(8080)
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 
 global.db = new Low(new JSONFile(`database.json`))
