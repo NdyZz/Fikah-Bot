@@ -7,6 +7,7 @@
 require('./config')
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, makeInMemoryStore, jidDecode, proto, getContentType, downloadContentFromMessage, fetchLatestWaWebVersion } = require("@adiwajshing/baileys");
 const fs = require("fs");
+const http = require("http")
 const pino = require("pino");
 const lolcatjs = require('lolcatjs')
 const path = require('path')
