@@ -31,10 +31,10 @@ const { toAudio, toPTT, toVideo } = require('./lib/converter')
 //http.createServer((_, res) => res.end("Uptime!")).listen(8080)
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
-const server = require('./server.js');
-const startServer = server.default;
+const connect = require('./server.js');
+//const startServer = server.default;
 
-startServer(PORT);
+connect(PORT);
 
 
 global.db = new Low(new JSONFile(`database.json`))
